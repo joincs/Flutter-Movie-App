@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(left: 60),
         width: MediaQuery.of(context).size.width,
-        height: 120,
+        height: 140,
         child: Card(
           color: Colors.black45,
           child: Padding(
@@ -68,22 +68,18 @@ class HomeScreen extends StatelessWidget {
                         "Rating: ${movie.imdbRating}/10",
                         style: mainTextStyle(),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "Released: ${movie.released}",
-                            style: mainTextStyle(),
-                          ),
-                          Text(
-                            movie.runtime,
-                            style: mainTextStyle(),
-                          ),
-                          Text(
-                            movie.rated,
-                            style: mainTextStyle(),
-                          ),
-                        ],
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "Released: ${movie.released}",
+                        style: mainTextStyle(),
+                      ),
+                      Text(
+                        "(${movie.runtime})",
+                        style: mainTextStyle(),
                       ),
                     ],
                   ),
